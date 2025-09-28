@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bcngbt888ws1i"]
+
+[ext_resource type="PackedScene" uid="uid://ckuawp5jemedn" path="res://Assets/Resources/House.glb" id="1_82lgr"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1fmww"]
+size = Vector3(1.0813, 90.8693, 1.83066)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5ub3g"]
+size = Vector3(0.352051, 56.2622, 2.06006)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m56iw"]
+size = Vector3(0.87793, 37.8565, 1.97589)
+
+[node name="Ground" type="MeshInstance3D"]
+transform = Transform3D(4.87857, 0, 0, 0, 1.08, 0, 0, 0, 2.90679, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(3.9312, 0, 0, 0, 0.39312, 0, 0, 0, 6.35507, 0.0721817, -0.191572, -3.08789)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.208862, 134.836, -0.17189)
+shape = SubResource("BoxShape3D_1fmww")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.999806, 0.0197035, 0, -0.0197035, 0.999806, 0, 0, 0, 1, -1.16332, 150.937, -0.307861)
+shape = SubResource("BoxShape3D_5ub3g")
+
+[node name="Root Scene" parent="StaticBody3D" instance=ExtResource("1_82lgr")]
+transform = Transform3D(2.45484, 0, 0, 0, 118.849, 0, 0, 0, 3.38016, 0.492165, 91.5342, 0.122812)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.05881, 109.625, -0.245453)
+shape = SubResource("BoxShape3D_m56iw")

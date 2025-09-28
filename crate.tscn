@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvsh5wxe2s7jk"]
+
+[ext_resource type="PackedScene" uid="uid://cm8tqu24luqhc" path="res://Assets/Resources/Crate.glb" id="1_uep05"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mo0jf"]
+size = Vector3(0.736328, 1.33203, 1.12125)
+
+[node name="PlatformBlue" type="MeshInstance3D"]
+transform = Transform3D(4.87857, 0, 0, 0, 1.08, 0, 0, 0, 4.87857, 0, 0, 0)
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999648, -0.0265433, 0, 0.0265433, 0.999648, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1.04443, 0.0172283, -0.00188689, -0.00615344, 2.89584, 0.0144276, 0.00292244, -0.0592435, 0.704715, 0.0898933, 2.12144, -0.00881368)
+shape = SubResource("BoxShape3D_mo0jf")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_uep05")]
+transform = Transform3D(4.94749, 0, 0, 0, 22.3488, 0, 0, 0, 4.94749, 0.0996552, 0.440459, 0.0524868)

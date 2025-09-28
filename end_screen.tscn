@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0narguob0u5u"]
+
+[ext_resource type="Script" uid="uid://bku0l7uo8dfei" path="res://end_screen.gd" id="1_my301"]
+
+[node name="EndScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_my301")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 69.0
+offset_right = 955.0
+offset_bottom = 197.0
+theme_override_font_sizes/font_size = 93
+text = "Congratulations"
+
+[node name="ButtonPlayAgain" type="Button" parent="."]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 248.0
+offset_right = 852.0
+offset_bottom = 358.0
+theme_override_font_sizes/font_size = 66
+text = "Play Again"
+
+[node name="ButtonExit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 398.0
+offset_right = 856.0
+offset_bottom = 508.0
+theme_override_font_sizes/font_size = 66
+text = "Exit"
+
+[connection signal="pressed" from="ButtonPlayAgain" to="." method="_on_button_play_again_pressed"]
+[connection signal="pressed" from="ButtonExit" to="." method="_on_button_exit_pressed"]

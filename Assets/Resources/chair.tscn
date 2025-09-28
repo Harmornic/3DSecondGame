@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://b340tk021umws"]
+
+[ext_resource type="PackedScene" uid="uid://dmpdivge0xn3x" path="res://Assets/Resources/Chair.glb" id="1_0e5dd"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k0np5"]
+size = Vector3(0.283966, 3.28789, 0.307983)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4k432"]
+size = Vector3(0.327423, 3.56134, 0.0655518)
+
+[node name="Ground" type="MeshInstance3D"]
+transform = Transform3D(3.9312, 0, 0, 0, 0.39312, 0, 0, 0, 3.9312, 0.0721817, -0.191572, -3.33582)
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.335459, 3.35058, 0.127617)
+shape = SubResource("BoxShape3D_k0np5")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.352348, 5.95985, -0.0618865)
+shape = SubResource("BoxShape3D_4k432")
+
+[node name="Root Scene" parent="." instance=ExtResource("1_0e5dd")]
+transform = Transform3D(0.639001, 0, 0, 0, 5.78064, 0, 0, 0, 0.639001, 0.338051, 1.60705, 0.124952)

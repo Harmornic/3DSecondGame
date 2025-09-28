@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bf0jaqd5ikqit"]
+
+[ext_resource type="PackedScene" uid="uid://dse7q6qk4raoy" path="res://Assets/Resources/Barrel.glb" id="1_n8un1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n8un1"]
+size = Vector3(0.473145, 41.1097, 0.535706)
+
+[node name="Ground" type="MeshInstance3D"]
+transform = Transform3D(4.87857, 0, 0, 0, 1.08, 0, 0, 0, 2.90679, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(3.9312, 0, 0, 0, 0.39312, 0, 0, 0, 6.35507, 0.0721817, -0.191572, -3.08789)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0788574, 20.0549, 0.126312)
+shape = SubResource("BoxShape3D_n8un1")
+
+[node name="Root Scene" parent="StaticBody3D" instance=ExtResource("1_n8un1")]
+transform = Transform3D(4.27824, 0, 0, 0, 193.256, 0, 0, -4.97259e-08, 4.27824, 0.0781597, 0.487312, 0.137142)

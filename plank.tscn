@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cntah1xx4ismk"]
+
+[ext_resource type="PackedScene" uid="uid://dej6p7v2qr41w" path="res://Assets/Resources/Planks.glb" id="1_pkcor"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pkcor"]
+size = Vector3(2.10534, 0.394563, 0.345421)
+
+[node name="Ground" type="MeshInstance3D"]
+transform = Transform3D(4.87857, 0, 0, 0, 1.08, 0, 0, 0, 4.87857, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999648, -0.0265433, 0, 0.0265433, 0.999648, 0, 0, 0)
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.404792, 0.00494861, 0.0256186, -0.00216254, 0.999366, 0.0908076, -0.00420546, -0.0375649, 2.41921, 0.0251788, 0.86942, 0.0372464)
+shape = SubResource("BoxShape3D_pkcor")
+
+[node name="Root Scene" parent="StaticBody3D" instance=ExtResource("1_pkcor")]
+transform = Transform3D(0.405408, 0, 0, 0, 1.83066, 0.0107609, 0, -0.048609, 0.405265, 0.0234555, 0.694643, 0.0429581)

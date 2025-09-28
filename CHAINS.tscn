@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dna36f7ttgsgc"]
+
+[ext_resource type="PackedScene" uid="uid://vxj8yo0hn16u" path="res://Assets/Resources/Chain Link.glb" id="1_ver85"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ver85"]
+size = Vector3(0.127396, 88.1979, 0.125)
+
+[node name="Ground" type="MeshInstance3D"]
+transform = Transform3D(4.87857, 0, 0, 0, 1.08, 0, 0, 0, 2.90679, 0, 0, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(3.9312, 0, 0, 0, 0.39312, 0, 0, 0, 6.35507, 0.0721817, -0.191572, -3.08789)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0677501, 69.3992, -0.232422)
+shape = SubResource("BoxShape3D_ver85")
+
+[node name="Chain Link" parent="StaticBody3D" instance=ExtResource("1_ver85")]
+transform = Transform3D(0.0521413, 0, 0, 0, 2.35533, 0, 0, 0, 0.0541335, 0.0671848, 26.0668, -0.234488)

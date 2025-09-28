@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://c371k4wi4jrng"]
+
+[ext_resource type="PackedScene" uid="uid://eangju1tfr5r" path="res://Assets/Resources/Log.glb" id="1_5gxlv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a0a2b"]
+size = Vector3(0.277893, 0.757446, 1.2558)
+
+[node name="PlatformBlue" type="MeshInstance3D"]
+transform = Transform3D(4.87857, 0, 0, 0, 1.08, 0, 0, 0, 4.87857, 0, 0, 0)
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999648, -0.0265433, 0, 0.0265433, 0.999648, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.989443, -0.00115307, -0.144915, 0.00116793, 0.99997, 1.78535e-05, 0.144915, -0.000186391, 0.989444, 0.165263, 0.961563, 0.101606)
+shape = SubResource("BoxShape3D_a0a2b")
+
+[node name="Log" parent="." instance=ExtResource("1_5gxlv")]
+transform = Transform3D(0.645378, 0, 0, 0, 2.9153, 3.10441e-08, 0, -2.13809e-07, 0.645379, 0.152277, 0.889123, 0.156493)
