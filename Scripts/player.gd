@@ -34,6 +34,9 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity") * 1
 
 # ---------- FUNCTIONS ---------- #
 
+
+
+
 func _process(delta):
 	player_animations()
 	get_input(delta)
