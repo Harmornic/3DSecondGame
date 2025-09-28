@@ -165,10 +165,6 @@ transform = Transform3D(1.36269, 0, 0, 0, 0.301667, 0, 0, 0, 0.811929, 21.9676, 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="Environment"]
 environment = SubResource("Environment_g4ka7")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Environment"]
-transform = Transform3D(-0.898603, 0.438763, 2.98254e-08, 0.146657, 0.300359, 0.942484, 0.413527, 0.846919, -0.334251, 9.04457, 6.63937, -28.4749)
-shadow_enabled = true
-
 [node name="Extras" type="Node3D" parent="."]
 
 [node name="SpawnPosition" type="Marker3D" parent="Extras"]
